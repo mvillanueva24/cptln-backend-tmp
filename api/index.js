@@ -6,8 +6,9 @@ import fileUpload from 'express-fileupload'
 conectDB()
 
 //Iniciar servidor
-app.listen(3000, ()=>{
-    console.log(`===============================\nConectado al puerto 3000 \nRuta: http://localhost:3000\n===============================`)
+const PORT = process.env.PORT || 3000
+app.listen(PORT, ()=>{
+    console.log(`===============================\nConectado al puerto ${PORT} \nRuta: http://localhost:${PORT}\n===============================`)
 })
 
 export default app
